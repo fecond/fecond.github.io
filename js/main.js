@@ -20,12 +20,15 @@
 	var fullHeight = function() {
 
 		$('.js-fullheight').css('height', $(window).height());
-		$(window).resize(function(){
-			$('.js-fullheight').css('height', $(window).height());
-		});
-
+		// $(window).resize(function(){
+		// 	$('.js-fullheight').css('height', $(window).height());
+		// });
 	};
-	fullHeight();
+	var width = $(window).width();
+	if(width > 767) {
+		fullHeight();
+	}
+	
 
 	// loader
 	var loader = function() {

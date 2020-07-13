@@ -211,6 +211,25 @@ img {
   vertical-align: middle;
   border-style: none; }
 
+.img-projects {
+  position: absolute;
+  top: 200%;
+  left: 31%;
+  transform: translate(-50%, -50%);
+}
+
+.img-projects img {
+  /* filter: url(filters.svg#grayscale); Firefox 3.5+ */
+  filter: gray; /* IE5+ */
+  -webkit-filter: grayscale(1); /* Webkit Nightlies & Chrome Canary */
+  -webkit-transition: all 0.5s ease-in-out;
+}
+  
+.img-projects img:hover {
+  filter: none;
+  -webkit-filter: grayscale(0);
+}
+
 svg:not(:root) {
   overflow: hidden; }
 
@@ -2239,7 +2258,7 @@ fieldset:disabled a.btn {
       box-shadow: 0 0 0 0.2rem rgba(248, 249, 250, 0.5); }
 
 .btn-dark {
-  margin-top: 50px;
+  margin-top: 10px;
   letter-spacing: 1px;
   font-family: 'Heebo', sans-serif;
   font-size: 2vh;
@@ -7984,12 +8003,75 @@ h1, h2, h3, h4, h5,
   .ftco-counter .counter-wrap {
     margin-bottom: 20px; } }
 
+.projects-h2 {
+  color: white;
+  display: inline-block !important;
+}
+
+.projects-h2 a {
+  color: white;
+}
+
+.projects-h2 a {
+  color: white;
+}
+
+.projects-1 {
+  display: inline-block;
+}
+
+.projects-1 figure {
+  display: none;
+  position: absolute;
+}
+
+.projects-1:hover figure {
+  display: block;
+  transition: 0.9s;
+}
+
+.projects-2 {
+  display: inline-block;
+}
+
+.projects-2 figure {
+  display: none;
+  position: absolute;
+}
+
+.projects-2:hover figure {
+  display: block;
+  transition: 0.9s;
+}
+
+.projects-3 {
+  display: inline-block;
+}
+
+.projects-3 figure {
+  display: none;
+  position: absolute;
+}
+
+.projects-3:hover figure {
+  display: block;
+  transition: 0.9s;
+}
+
+.text-projects {
+  margin-left: 17vw;
+}
+
+#main-projects[style] {
+  background-image: url(../images/comingsoon-3.jpg);
+}
+
 .project {
   position: relative;
   width: 100%;
-  margin-bottom: 14em; }
+  margin-bottom: 10em; }
   .project .img {
-    position: relative; }
+    position: relative;}
     .project .img .text {
       width: 90%;
       margin: 0 auto;
@@ -8009,9 +8091,20 @@ h1, h2, h3, h4, h5,
         -ms-transition: all 0.3s ease;
         transition: all 0.3s ease; }
         .project .img .text h2 a {
-          color: #000000; }
+          color: #fff; }
       .project .img .text:hover h2 a, .project .img .text:focus h2 a {
-        color: #fff; }
+        color: #000; }
+
+@media (max-width: 767.98px) {
+  .project #p[style] {
+    height: 300px;
+    background-size: 380px;
+    background-position: center top;
+  }
+  .project {
+    margin-bottom: 1em;
+  }
+}
 
 .btn-custom-2 {
   font-size: 7vw;
