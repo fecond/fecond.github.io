@@ -33,7 +33,6 @@ var page = split[length-1];
 
 	var width = $(window).width();
 	if(page.localeCompare("projects.html") == 0) {
-		console.log("oui");
 		if(width > 767) {
 			fullHeight();
 		}
@@ -46,7 +45,6 @@ var page = split[length-1];
 	// loader
 	var loader = function() {
 		setTimeout(function() { 
-			console.log((countImg).length);
 			if($('.img').length == (countImg).length) {
 				$('#ftco-loader').removeClass('show');
 			}

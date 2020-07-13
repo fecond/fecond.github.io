@@ -1754,8 +1754,8 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
 .input-group-lg > .input-group-append > select.btn:not([size]):not([multiple]) {
   height: calc(2.875rem + 2px); }
 
-.form-group {
-  margin-bottom: 1rem; }
+/* .form-group {
+  margin-bottom: 1rem; } */
 
 .form-text {
   display: block;
@@ -7730,6 +7730,17 @@ h1, h2, h3, h4, h5,
     .ftco-intro h1 {
         font-size: 110px;
     }
+}
+
+.comingsoon h2 {
+  line-height: 1 !important;
+  font-size: 8vh;
+}
+
+@media (min-width: 1199px) {
+  .comingsoon h2 {
+    font-size: 18vh;
+  }
 }
 
 .spasiall {
