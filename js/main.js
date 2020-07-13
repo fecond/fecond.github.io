@@ -3,6 +3,12 @@
  	easing: 'slide'
  });
 
+var countImg = document.getElementsByClassName("img");
+var str = top.location.pathname;
+var split = str.split("/");
+var length = split.length;
+var page = split[length-1];
+
 (function($) {
 
 	"use strict";
@@ -24,16 +30,24 @@
 		// 	$('.js-fullheight').css('height', $(window).height());
 		// });
 	};
+
 	var width = $(window).width();
-	if(width > 767) {
+	if(page.localeCompare("projects.html") == 0) {
+		console.log("oui");
+		if(width > 767) {
+			fullHeight();
+		}
+	}
+	else {
 		fullHeight();
 	}
-	
+
 
 	// loader
 	var loader = function() {
 		setTimeout(function() { 
-			if($('#ftco-loader').length > 0) {
+			console.log((countImg).length);
+			if($('.img').length == (countImg).length) {
 				$('#ftco-loader').removeClass('show');
 			}
 		}, 1);
